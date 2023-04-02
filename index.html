@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrambled Sentences Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Scrambled Sentences Game</h1>
+    <form id="sentence-form">
+      <label for="sentence-input">Enter or upload a sentence:</label>
+      <br>
+      <textarea id="sentence-input" rows="5" placeholder="Type a sentence..."></textarea>
+      <input type="file" id="file-input" accept=".txt">
+      <button type="submit">Scramble</button>
+    </form>
+    <div id="scrambled-container" class="hidden">
+      <h2>Scrambled Words:</h2>
+      <ul id="scrambled-sentence"></ul>
+      <h2>Selected Order:</h2>
+      <ul id="selected-sentence"></ul>
+      <button id="check-order">Check Order</button>
+      <p id="feedback" class="hidden"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
