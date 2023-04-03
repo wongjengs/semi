@@ -13,12 +13,14 @@ let currentSentenceIndex = 0;
 
 sentenceForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let sentence = sentenceInput.value.trim();
-  if (!sentence) return;
-  sentences = [sentence];
+  let inputText = sentenceInput.value.trim();
+  if (!inputText) return;
+
+  sentences = inputText.split('\n').map(s => s.trim()); // Split by lines
   currentSentenceIndex = 0;
   startGame();
 });
+
 
 fileInput.addEventListener("change", (e) => {
   const file = e.target.files[0];
